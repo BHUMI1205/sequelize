@@ -9,7 +9,6 @@ export class UserController {
 
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
-    console.log("🚀 ~ UserController ~ create ~ createUserDto:", createUserDto)
     return this.userService.create(createUserDto);
   }
 
@@ -20,8 +19,6 @@ export class UserController {
 
   @Get()
   findAll() {
-    console.log("ok");
-    
     return this.userService.findAll();
   }
 
